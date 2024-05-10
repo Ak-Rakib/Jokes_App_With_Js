@@ -26,6 +26,8 @@ body {
 
 .text_of_joke{
     text-align: center;
+    padding: 15px 20px;
+    font-size: 30px;
 }
 
 .btn{
@@ -39,36 +41,29 @@ body {
 }
 
 .next_btn{
-    background-color: burlywood;
+    /* background-color: burlywood; */
     font-weight: bold;
     padding: 7px 10px;
     border: none;
     border: 5%;
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 
 .share_btn{
-    background-color: black;
+    /* background-color: black; */
+    font-weight: bold;
     padding: 7px 10px;
     border: none;
     border: 5%;
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
 .next_btn:hover {
-    background-color: black;
-    color: white;
     cursor: pointer;
 }
 
 .share_btn:hover{
-    background-color: burlywood;
-    color: black;
-}
-
-.text_of_joke {
-    padding: 0px 20px;
-    font-size: 30px;
+    cursor: pointer;
 }
