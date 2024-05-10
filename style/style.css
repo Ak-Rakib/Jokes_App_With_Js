@@ -15,8 +15,10 @@ body {
 
 .parents_container{
     /* padding: 45px 55px; */
-    width: 500px;
-    height: 300px;
+    position: relative;
+    height: 100vh;
+    width: 600px;
+    height: 500px;
     border-radius: 2%;
     background-color: aliceblue;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -27,14 +29,18 @@ body {
 }
 
 .btn{
-    position: relative;
-    top: 95px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: center;
 }
 
-.next_btn,.share_btn{
+.next_btn{
     background-color: burlywood;
+    font-weight: bold;
     padding: 7px 10px;
     border: none;
     border: 5%;
@@ -42,11 +48,27 @@ body {
     color: black;
 }
 
+.share_btn{
+    background-color: black;
+    padding: 7px 10px;
+    border: none;
+    border: 5%;
+    text-decoration: none;
+    color: white;
+}
+
 .next_btn:hover {
-    background-color: aliceblue;
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 
 .share_btn:hover{
-    background-color: aliceblue;
+    background-color: burlywood;
+    color: black;
+}
+
+.text_of_joke {
+    padding: 0px 20px;
+    font-size: 30px;
 }
