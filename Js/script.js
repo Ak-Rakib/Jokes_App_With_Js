@@ -44,13 +44,21 @@ nextJokeBtn.addEventListener('click', function () {
             console.log(data);
             jokeText.textContent = data.joke;
 
-            const shareFacebookLink = `https://www.facebook.com/sharer.php?u={data.joke}`; 
-            shareBtn.setAttribute('href', shareFacebookLink);
+            // const shareFacebookLink = `https://www.facebook.com/sharer.php?u=${data.joke}`; 
+            // shareBtn.setAttribute('href', shareFacebookLink);
         })
         .catch(error => {
             console.error('Fetch error:', error);
             jokeText.textContent = "404!";
-            shareBtn.removeAttribute('href');
-
         });
 });
+
+
+function shareFacebook() {
+    const currentUrl = encodeURIComponent(document.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+    const shareUrl = `https://www.facebook.com/sharer.php?u=${currentUrl}&t=${pageTitle}`;
+
+    window.open(shareUrl, '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    return false;
+}
